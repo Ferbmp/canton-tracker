@@ -13,7 +13,6 @@ describe("SelectCantons Component", () => {
       render(<SelectCantons cantons={mockCantons} onChange={() => {}} />);
 
       const placeholderElement = screen.getByText("Select a Canton");
-      console.log(placeholderElement);
       expect(placeholderElement).toBeInTheDocument();
    });
 
