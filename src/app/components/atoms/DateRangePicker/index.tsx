@@ -27,6 +27,7 @@ const DateRangePickerComponent: React.FC<DateRangePickerComponentProps> = ({
          data-testid='date-range-picker'
          data-cy='date-range-picker'
          className='custom-range-picker'
+         format='DD-MM-YYYY'
       />
    );
 };

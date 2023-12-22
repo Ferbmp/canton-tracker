@@ -12,7 +12,7 @@ interface HolidayListProps {
 }
 
 const HolidayList: React.FC<HolidayListProps> = ({ holidays }) => {
-   const formatDate = (date: string) => dayjs(date).format("DD.MM.YYYY"); // Formato suíço
+   const formatDate = (date: string) => dayjs(date).format("DD-MM-YYYY"); // Formato suíço
 
    return (
       <Collapse accordion>
