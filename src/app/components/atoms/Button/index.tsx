@@ -1,4 +1,3 @@
-// src/components/atoms/ButtonComponent.tsx
 "use client";
 
 import React from "react";

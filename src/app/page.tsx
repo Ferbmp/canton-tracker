@@ -9,51 +9,65 @@ import { useHolidaySearch } from "./contexts/HolidaySearchContext";
 import LoadingOverlay from "./components/atoms/LoadingOverlay";
 
 const Home = () => {
-  const {
-    cantons,
-    loading,
-    holidays,
-    fetchHolidays,
-    setSelectedCanton,
-    setDateRange,
-  } = useHolidaySearch();
+   const {
+      cantons,
+      loading,
+      holidays,
+      fetchHolidays,
+      setSelectedCanton,
+      setDateRange,
+   } = useHolidaySearch();
 
-  const { Header, Content } = Layout;
+   const { Header, Content } = Layout;
 
-  const handleCantonChange = (isoCode: string) => {
-    setSelectedCanton(isoCode);
-  };
+   const handleCantonChange = (isoCode: string) => {
+      setSelectedCanton(isoCode);
+   };
 
-  const handleDateRangeChange = (range: [string | null, string | null]) => {
-    setDateRange(range);
-  };
+   const handleDateRangeChange = (range: [string | null, string | null]) => {
+      setDateRange(range);
+   };
 
-  const handleSearch = () => {
-    fetchHolidays();
-  };
+   const handleSearch = () => {
+      fetchHolidays();
+   };
 
-  return (
-    <Layout>
-      {loading && <LoadingOverlay />}
+   return (
+      <Layout style={{ minHeight: "100vh" }}>
+         {loading && <LoadingOverlay />}
 
-      <Header style={{ background: "#f0f2f5", padding: "20px" }}>
-        <Row gutter={16}>
-          <Col span={8}>
-            <SelectCantons cantons={cantons} onChange={handleCantonChange} />
-          </Col>
-          <Col span={8}>
-            <DateRangePickerComponent onChange={handleDateRangeChange} />
-          </Col>
-          <Col span={8}>
-            <ButtonComponent onClick={handleSearch} label="Search Holidays" />
-          </Col>
-        </Row>
-      </Header>
-      <Content style={{ padding: "20px", marginTop: "20px" }}>
-        <HolidayList holidays={holidays} />
-      </Content>
-    </Layout>
-  );
+         <Header
+            style={{
+               background: "#f0f2f5",
+               padding: "0 20px",
+               zIndex: 1,
+               height: "100%",
+            }}
+         >
+            <Row gutter={[16, 8]}>
+               <Col xs={24} sm={12} md={8}>
+                  <SelectCantons
+                     cantons={cantons}
+                     onChange={handleCantonChange}
+                  />
+               </Col>
+               <Col xs={24} sm={12} md={8}>
+                  <DateRangePickerComponent onChange={handleDateRangeChange} />
+               </Col>
+               <Col xs={24} sm={24} md={8}>
+                  <ButtonComponent
+                     onClick={handleSearch}
+                     label='Search Holidays'
+                  />
+               </Col>
+            </Row>
+         </Header>
+
+         <Content style={{ padding: "20px" }}>
+            <HolidayList holidays={holidays} />
+         </Content>
+      </Layout>
+   );
 };
 
 export default Home;

@@ -1,5 +1,3 @@
-// src/components/atoms/SelectCantons.tsx
-
 import React, { useState } from "react";
 import { AutoComplete } from "antd";
 

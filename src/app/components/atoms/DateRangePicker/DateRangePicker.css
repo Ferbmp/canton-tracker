@@ -1,0 +1,8 @@
+@media (max-width: 768px) {
+   .custom-range-picker {
+      width: 100%;
+   }
+   .ant-picker-panels {
+      flex-direction: column !important;
+   }
+}

@@ -1,11 +1,8 @@
-// src/components/atoms/DateRangePicker.tsx
-
 "use client";
 
 import React from "react";
 import { DatePicker } from "antd";
-import dayjs from "dayjs";
-
+import "./DateRangePicker.css";
 const { RangePicker } = DatePicker;
 
 interface DateRangePickerComponentProps {
@@ -29,6 +26,7 @@ const DateRangePickerComponent: React.FC<DateRangePickerComponentProps> = ({
          inputReadOnly
          data-testid='date-range-picker'
          data-cy='date-range-picker'
+         className='custom-range-picker'
       />
    );
 };

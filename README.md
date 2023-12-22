@@ -1,5 +1,9 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Production Link
+
+https://canton-tracker.vercel.app/
+
 ## Description
 
 The Swiss Canton Holiday Tracker is a web application designed to help users track holidays across different cantons in Switzerland. Users can customize their working days to view holidays that fall on these specific days, providing a personalized experience to plan and manage their time more effectively.
@@ -101,3 +105,13 @@ Before you begin, ensure you have Node.js version 18 or higher installed. You ca
 If you encounter any issues related to Node.js versions, consider using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm) to install and switch between multiple Node.js versions.
 
 For any other issues or questions, consult the project documentation or submit an issue on the project's repository.
+
+#### Future Improvements
+
+With more time and resources, the following improvements could be made:
+
+Develop Test Scenarios: Expand on existing tests and cover edge cases to ensure the app's robustness.
+
+Add Storybook: Implement Storybook for better component documentation and design consistency.
+
+> > > > > > > ad02f8d (fix: mobile layout)
