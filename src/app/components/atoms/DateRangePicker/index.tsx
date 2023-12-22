@@ -9,27 +9,28 @@ import dayjs from "dayjs";
 const { RangePicker } = DatePicker;
 
 interface DateRangePickerComponentProps {
-  onChange: (range: [string | null, string | null]) => void;
+   onChange: (range: [string | null, string | null]) => void;
 }
 
 const DateRangePickerComponent: React.FC<DateRangePickerComponentProps> = ({
-  onChange,
+   onChange,
 }) => {
-  const handleRangeChange = (dates: any, dateStrings: [string, string]) => {
-    const formattedRange: [string | null, string | null] = [
-      dateStrings[0] || null,
-      dateStrings[1] || null,
-    ];
-    onChange(formattedRange);
-  };
+   const handleRangeChange = (dates: any, dateStrings: [string, string]) => {
+      const formattedRange: [string | null, string | null] = [
+         dateStrings[0] || null,
+         dateStrings[1] || null,
+      ];
+      onChange(formattedRange);
+   };
 
-  return (
-    <RangePicker
-      onChange={handleRangeChange}
-      inputReadOnly
-      data-testid="date-range-picker"
-    />
-  );
+   return (
+      <RangePicker
+         onChange={handleRangeChange}
+         inputReadOnly
+         data-testid='date-range-picker'
+         data-cy='date-range-picker'
+      />
+   );
 };
 
 export default DateRangePickerComponent;

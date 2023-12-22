@@ -5,20 +5,20 @@ import React from "react";
 import { Button } from "antd";
 
 interface ButtonComponentProps {
-  onClick: () => void;
-  label: string;
-  loading?: boolean;
+   onClick: () => void;
+   label: string;
+   loading?: boolean;
 }
 
 const ButtonComponent: React.FC<ButtonComponentProps> = ({
-  onClick,
-  label,
+   onClick,
+   label,
 }) => {
-  return (
-    <Button type="primary" onClick={onClick}>
-      {label}
-    </Button>
-  );
+   return (
+      <Button type='primary' onClick={onClick} data-cy='search-button'>
+         {label}
+      </Button>
+   );
 };
 
 export default ButtonComponent;
