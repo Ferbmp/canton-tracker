@@ -1,36 +1,40 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Description
 
-First, run the development server:
+The Swiss Canton Holiday Tracker is a web application designed to help users track holidays across different cantons in Switzerland. Users can customize their working days to view holidays that fall on these specific days, providing a personalized experience to plan and manage their time more effectively.
+
+## Key Technologies
+
+Next.js: A React framework for production, offering server-side rendering, static site generation, and numerous optimization features.
+React.js: A JavaScript library for building user interfaces, used for its component-based architecture and state management capabilities.
+TypeScript: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+Ant Design (AntD): A design system with high-quality React UI components to enrich the user interface of the application.
+dayjs: A minimalist JavaScript library for parsing, validating, and manipulating dates, used in the application to handle date operations.
+axios: A promise-based HTTP client for making HTTP requests from the browser to the backend.
+
+## Project Structure
+
+Atoms, Molecules, Organisms: Components are organized following the Atomic Design methodology for maintainability and reusability.
+
+Contexts: React Context API is used for managing global state related to user's selected canton, date range, and holidays.
+
+Services: Abstracts external API calls, making the application more maintainable and scalable.
+
+## Decisions and Citations
+
+UI Library Choice: Ant Design was chosen for its comprehensive set of high-quality components and extensive documentation, speeding up the development process.
+Date Handling: dayjs was selected over other libraries for its simplicity and lightweight footprint.
+State Management: Context API was used instead of more complex state management solutions to keep the app straightforward and maintainable.
+
+## Acknowledgements
+
+This project was developed with the assistance of OpenAI's ChatGPT, which provided guidance and suggestions on best practices, coding standards, and troubleshooting during the development process.
+
+## How to Run Locally
 
 ```bash
+npm install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
