@@ -7,7 +7,9 @@ The Swiss Canton Holiday Tracker is a web application designed to help users tra
 ## Key Technologies
 
 Next.js: A React framework for production, offering server-side rendering, static site generation, and numerous optimization features.
+
 React.js: A JavaScript library for building user interfaces, used for its component-based architecture and state management capabilities.
+
 TypeScript: A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
 Ant Design (AntD): A design system with high-quality React UI components to enrich the user interface of the application.
 dayjs: A minimalist JavaScript library for parsing, validating, and manipulating dates, used in the application to handle date operations.
