@@ -77,7 +77,7 @@ Before you begin, ensure you have Node.js version 18 or higher installed. You ca
    2. Then, in a separate terminal, run:
 
       ```bash
-      npm run test:e2e
+      npm run cypress:open
       ```
 
 ### Additional Scripts
